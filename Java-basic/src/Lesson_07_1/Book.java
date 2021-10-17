@@ -6,7 +6,7 @@ package Lesson_07_1;
 
 public class Book {
 
-    private final int bookISBN;
+    private final String bookISBN;
     private final String bookTitle;
     private final String authorName;
 
@@ -16,7 +16,7 @@ public class Book {
         this.authorName = bookBuilder.authorName;
     }
 
-    public int getBookISBN() {
+    public String getBookISBN() {
         return bookISBN;
     }
 
@@ -31,14 +31,14 @@ public class Book {
 
     // Inner class
     public static class BookBuilder {
-        private int bookISBN;
+        private String bookISBN;
         private String bookTitle;
         private String authorName;
 
         public BookBuilder() {
         }
 
-        public BookBuilder bookISBN(int bookISBN) {
+        public BookBuilder bookISBN(String bookISBN) {
             this.bookISBN = bookISBN;
             return this;
         }
