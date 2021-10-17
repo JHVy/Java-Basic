@@ -1,0 +1,10 @@
+#Contect
+- Different attribute data set
+- If constructor overloading -> multiple constructors
+- If any constructor (true, null) -> Logic become more complex
+
+#Builder Design Pattern
+- Using the concept Encapsulation
+- In main class from constructor, attributes: private
+- Inner static class builder: same attributes with main class, Service methods (attribute) -> Builder
+- Finally in the Builder class: build -> Book -> book : Immutable
