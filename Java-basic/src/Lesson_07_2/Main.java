@@ -3,6 +3,7 @@ package Lesson_07_2;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -48,12 +49,8 @@ public class Main {
         animals.add(eagle);
         animals.add(falcon);
 
-        List<Animal> animalCannotFly = new ArrayList<Animal>();
-        for (Animal animal : animals){
-            if (!animal.isFlyable){
-                animalCannotFly.add(animal);
-            }
-        }
+        List<Animal> animalCannotFly = animals.stream().filter(animal -> !animal.isFlyable()).collect(Collectors.toList());
+
         Animal winner = getMaxSpeedOfAnimal(animalCannotFly);
         System.out.println("Winner is: " + winner.getName());
         System.out.println("Winner's speed was: " + winner.getSpeed());
